@@ -18,7 +18,7 @@
 
         int index = findByIsbn(isbn);
 
-        if (index = -1) {
+        if (index == -1) {
         return false;
         }
 
@@ -49,7 +49,7 @@
             if (catalog[i].containsKeyword(kw)) {
                 cout << catalog[i].toString() << endl;
                 found = true;
-            }
+            }   
         
         if (!found) {
             cout << "No book found." << endl;
@@ -97,7 +97,7 @@
 
             int mindex = i;
 
-            for (int j = 1; j < catalog.size() - 1; j++) {
+            for (int j = i + 1; j < catalog.size(); j++) {
 
                 if (catalog[j].getTitle() < catalog[mindex].getTitle()) {
                     mindex = j;

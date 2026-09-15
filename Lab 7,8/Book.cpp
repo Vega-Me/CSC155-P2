@@ -5,10 +5,10 @@
 
 
 Book::Book()
-    : title("na"),
-    author("na"),
-    isbn("na"),
-    year(0)
+    : title("Title"),
+    author("Author"),
+    isbn("Isbn"),
+    year(2004)
 {
 }
 
