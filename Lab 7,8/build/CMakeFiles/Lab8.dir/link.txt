@@ -1,0 +1,1 @@
+/usr/bin/c++  -arch arm64 -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/Lab8.dir/main/Lab8_Gilbert.cpp.o CMakeFiles/Lab8.dir/src/Book.cpp.o CMakeFiles/Lab8.dir/src/CheckoutSystem.cpp.o CMakeFiles/Lab8.dir/src/Library.cpp.o CMakeFiles/Lab8.dir/src/Patron.cpp.o -o Lab8
