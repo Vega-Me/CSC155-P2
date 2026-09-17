@@ -22,7 +22,7 @@
         return false;
         }
 
-        catalog.erase(catalog.begin() + 2 );
+        catalog.erase(catalog.begin() + index );
         return true;
 
     }
@@ -57,6 +57,7 @@
 
     }
 
+
     bool Library::checkoutBook(string isbn) {
         int index = findByIsbn(isbn);           //gives index of vector catalog
 
@@ -70,6 +71,7 @@
         }
 
         catalog[index].setCheckedOut(true);
+        catalog[index].incrementBorrowedCount();
         return true;
     }
 
@@ -123,6 +125,15 @@
     void Library::printAll() const {
         for (int i = 0; i < catalog.size(); i++) {
             cout << i + 1 << ". " << catalog[i].toString() << endl;
+        }
+    }
+
+
+    void Library::printBorrowCount() const {
+        int tempBorrowCount;
+        for (int i = 0; i < catalog.size(); i++) {
+            tempBorrowCount = catalog[i].getBorrowedCount();
+            cout << catalog[i].getTitle() << " has been borrowed: " << tempBorrowCount << " times." << '\n';
         }
     }
 

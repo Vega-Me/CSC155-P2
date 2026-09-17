@@ -4,4 +4,4 @@ cmake -S . -B build
 cmake --build build
 
 Run:
-./build/Lab8
+./build/Lab8 or ./build/Lab7

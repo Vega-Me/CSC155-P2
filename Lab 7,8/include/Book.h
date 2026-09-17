@@ -14,6 +14,8 @@ class Book {
         string isbn;
         int    year;
         bool   checkedOut;
+        
+        int borrowedCount; //creative final feature
     
     public:
         Book();
@@ -27,6 +29,9 @@ class Book {
         void setCheckedOut(bool status);
         bool containsKeyword(string kw) const;          
         string toString() const;
+
+        int getBorrowedCount() const;
+        void incrementBorrowedCount();
 
 };
 

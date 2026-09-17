@@ -24,7 +24,7 @@ class Library{
         void sortByTitle();                         //all I know is void return nothing but we're changing a vector by .sort?
         int getCount() const;                       //get the count so don't change, possibly .size | const cuz no change
         void printAll() const;                      //void cuz no return just print, const cuz no change
-    
+        void printBorrowCount() const;  //creative final feature
 };
 
 #endif

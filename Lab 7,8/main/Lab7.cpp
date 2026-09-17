@@ -1,4 +1,4 @@
-/*
+
 #include <iostream>
 #include <iomanip> 
 #include <array>
@@ -24,7 +24,7 @@ Library library;
     library.addBook(b6);
 
 
-cout << "\n=== LIBRARY CATALOG SYSTEM ===" << endl;
+cout << "\n\n\n\n\n=== LIBRARY CATALOG SYSTEM ===" << endl;
 cout << "Books added: " << library.getCount() << endl;
 
 
@@ -164,4 +164,3 @@ else
 // excercise 3
 //containsKeyword() is case insensitive, it searches both the author and title field because of the transform tolower begin -> end
 //and because of the string::npos checks in the if statement.
-*/

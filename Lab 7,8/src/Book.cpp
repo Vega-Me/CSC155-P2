@@ -5,10 +5,12 @@
 
 
 Book::Book()
-    : title("Title"),
-    author("Author"),
-    isbn("Isbn"),
-    year(2004)
+    : title("Unknown"),
+    author("Unknown"),
+    isbn("000-0"),
+    year(0),
+    checkedOut(false),
+    borrowedCount(0)
 {
 }
 
@@ -17,7 +19,9 @@ Book::Book(string t, string a, string id, int y)
     : title(t),
     author(a),
     isbn(id),
-    year(y)
+    year(y),
+    checkedOut(false),
+    borrowedCount(0)
 {
     if (year < 0) {
         year = 0;
@@ -81,4 +85,12 @@ string Book::toString() const {
         author + " (" +
         to_string(year) + ") [" +
         status + "]"};
+}
+
+int Book::getBorrowedCount() const {
+    return borrowedCount;
+}
+
+void Book::incrementBorrowedCount() {
+    borrowedCount++;
 }

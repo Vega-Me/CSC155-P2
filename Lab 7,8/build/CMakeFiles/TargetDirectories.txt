@@ -1,3 +1,0 @@
-/Users/antonioalcantar/Desktop/CLASSES/C++/Last Labs/Lab 7,8/build/CMakeFiles/Lab8.dir
-/Users/antonioalcantar/Desktop/CLASSES/C++/Last Labs/Lab 7,8/build/CMakeFiles/edit_cache.dir
-/Users/antonioalcantar/Desktop/CLASSES/C++/Last Labs/Lab 7,8/build/CMakeFiles/rebuild_cache.dir
