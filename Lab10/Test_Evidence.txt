@@ -1,0 +1,83 @@
+antonioalcantar@Marcos-MacBook-Pro Lab10 % g++ -std=c++17 Lab10.cpp Game.cpp -o Lab10
+antonioalcantar@Marcos-MacBook-Pro Lab10 % ./Lab10
+Stopping invalid: Bad Game|Action|-12|8
+Reason: Hours played cannot be negative.
+
+=======================
+LAB 10 TEST EVIDENCE
+
+TEST 1 - Normal Record
+Input:
+Hades|Action|45|9
+
+Result:
+PASS
+Game loaded correctly.
+
+
+TEST 2 - Boundary Values
+Input:
+New Game|RPG|0|1
+
+Result:
+PASS
+Game accepted.
+
+
+TEST 3 - Invalid Hours
+Input:
+Broken Game|Action|-10|7
+
+Result:
+PASS
+Program displayed:
+Skipping invalid record: Broken Game|Action|-10|7
+Reason: Hours played cannot be negative.
+
+Program continued running.
+
+
+TEST 4 - Empty Collection
+
+Result:
+PASS
+Program displayed:
+No games are currently loaded.
+
+
+TEST 5 - Case-Insensitive Search
+Search:
+MINE
+
+Result:
+PASS
+Minecraft was found.
+
+===================
+
+LAB 10 CREATIVE FEATURE TEST EVIDENCE
+
+Creative Feature:
+Added a Game Statistics option that summarizes the games currently loaded in the program.
+
+Test Data:
+Minecraft|Sandbox|250|10
+Hades|Action|45|9
+Portal 2|Puzzle|18|10
+Dark Souls|RPG|80|9
+
+Expected Results:
+Total games: 4
+Total hours played: 393
+Average rating: 9.5
+Highest rated game: Minecraft (10/10)
+
+Verification:
+250 + 45 + 18 + 80 = 393 total hours.
+
+10 + 9 + 10 + 9 = 38 total rating points.
+38 / 4 = 9.5 average rating.
+
+The highest rating is 10. Minecraft is the first game encountered with that rating.
+
+The program produced the expected statistics, so the creative feature was verified.

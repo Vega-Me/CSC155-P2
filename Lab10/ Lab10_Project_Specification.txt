@@ -1,0 +1,133 @@
+CSC 155 - LAB 10 OPEN-ENDED INTEGRATION PROJECT
+
+Student: Marcos Gilbert
+Project title: Game Library
+
+1. Problem and intended user
+What problem does the program solve, and who would use it?
+This is a simple program that organizes games that people have played and want to keep organized.
+
+
+2. Data model
+Name the primary class, its private data members, validation rules, constructors,
+and public behaviors.
+Primary class: Game
+
+Private data members:
+- string title
+- string genre
+- int hoursPlayed
+- int rating
+
+Validation:
+- title cannot be empty
+- genre cannot be empty
+- hoursPlayed cannot be negative
+- rating must be between 1 and 10
+
+Constructors:
+- default constructor
+- parameterized constructor
+
+Public behaviors:
+- setters
+- getters
+- toString()
+
+
+3. Collection
+Explain where the program uses an array or vector of objects and why that
+collection is appropriate.
+The program uses a array called games declared in 'Game.g'. Every game object is from the class Games.
+
+4. Functions
+List at least two standalone function signatures and the single responsibility
+of each function.
+void displayGames(const vector<Game>& games);
+Responsibility: Displays every Game object currently stored.
+
+void loadGames(const string& fileName, vector<Game>& games);
+Responsibility: Reads game records sequentially from a text file,
+validates them, and adds valid Game objects to the vector.
+
+void searchGames(const vector<Game>& games, string keyword);
+Responsibility: Searches game titles using a case-insensitive keyword.
+
+void saveGames(const string& fileName, const vector<Game>& games);
+Responsibility: Writes the current game collection sequentially
+to a text file.
+
+
+5. File input/output
+Describe the sequential text-file format, including one valid and one invalid row.
+Format:
+title|genre|hoursPlayed|rating
+
+Basically the user can't use negative hours for hours played.
+
+Valid row:
+Minecraft|Sandbox|250|10
+
+Invalid row:
+Bad Game|Action|-12|8
+
+
+6. Exception plan
+Name at least one failure condition that will throw an exception and where it is
+caught. Explain the message shown to the user.
+If the user tries to do an incorrect cin when creating a new game object using the setters, the setter will throw a error to 
+a catch sitting outside the function.
+
+
+7. Test plan
+List at least five tests: normal input, boundary input, invalid input, empty data,
+and one project-specific edge case.
+
+Test 1 — Normal input
+Input:
+Hades|Action|45|9
+
+Expected:
+Game loads and displays successfully.
+
+Test 2 — Boundary input
+Input:
+New Game|RPG|0|1
+
+Expected:
+Game is accepted because 0 hours and rating 1 are valid boundaries.
+
+Test 3 — Invalid input
+Input:
+Broken Game|Action|-10|7
+
+Expected:
+Exception is thrown, record is skipped, and an explanation is shown.
+
+Test 4 — Empty data
+Input:
+An empty vector
+
+Expected:
+Display and statistics functions report that no games are available
+without crashing.
+
+Test 5 — Project-specific edge case
+Search keyword:
+MINE
+
+Existing title:
+Minecraft
+
+Expected:
+Minecraft is found because searching is case-insensitive.
+
+
+8. AI learning evidence
+Which Unit 7 AI Transcript exchange influenced a design or testing decision? What
+did you verify or reject before using the idea?
+The ai discussion that helped me the most was about the try and catch blocks since I was still struggling in understanding
+how the exceptions getting caught interact with the thrown functions. 
+
+Before using the design, I verified that the program skips an invalid
+record and continues loading later valid records.

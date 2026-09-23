@@ -1,0 +1,4 @@
+Minecraft|Sandbox|250|10
+Hades|Action|45|9
+Portal 2|Puzzle|18|10
+Dark Souls|RPG|80|9
